@@ -1,4 +1,4 @@
-export const APIURL = "https://apiv2.guildleaderboard.com/"
+export const APIURL = "https://apiv2.guildlb.com/"
 // export const APIURL = "http://localhost:8080/"
 
 export const COLOR_ARRAY = [

@@ -3,8 +3,8 @@ User-agent: *
 Allow: /
 
 # Host
-Host: https://guildleaderboard.com
+Host: https://guildlb.com
 
 # Sitemaps
-Sitemap: https://guildleaderboard.com/sitemap.xml
-Sitemap: https://guildleaderboard.com/server-sitemap.xml
+Sitemap: https://guildlb.com/sitemap.xml
+Sitemap: https://guildlb.com/server-sitemap.xml

@@ -303,7 +303,7 @@ class Players extends React.Component {
 
   loadPage(sortOn, page, searchQuery = null) {
     console.log(sortOn)
-    fetch(`https://apiv2.guildleaderboard.com/leaderboard/player?sort_by=${sortOn}&page=${page}${searchQuery ? `&username=${searchQuery}` : ''}`)
+    fetch(`https://apiv2.guildlb.com/leaderboard/player?sort_by=${sortOn}&page=${page}${searchQuery ? `&username=${searchQuery}` : ''}`)
       .then((res) => res.json())
       .then(
         (result) => {
@@ -357,7 +357,7 @@ export default function Home({ playerJson, stats }) {
 }
 
 export async function getStaticProps() {
-  const res = await axios.get('https://apiv2.guildleaderboard.com/leaderboard/player?sort_by=latest_sb_xp');
+  const res = await axios.get('https://apiv2.guildlb.com/leaderboard/player?sort_by=latest_sb_xp');
 
   const playerJson = res.data;
   if (res.status !== 200) {
@@ -365,7 +365,7 @@ export async function getStaticProps() {
     throw new Error('Failed to fetch API');
   }
 
-  const res2 = await axios.get('https://apiv2.guildleaderboard.com/stats');
+  const res2 = await axios.get('https://apiv2.guildlb.com/stats');
 
   const stats = res2.data;
   if (res2.status !== 200) {

@@ -43,7 +43,7 @@ export default function Home({ stats }) {
 }
 
 export async function getStaticProps() {
-    const res = await axios.get('https://apiv2.guildleaderboard.com/stats');
+    const res = await axios.get('https://apiv2.guildlb.com/stats');
 
     const stats = res.data;
     if (res.status !== 200) {

@@ -317,7 +317,7 @@ export default function Home({ guildsJson, stats }) {
 }
 
 export async function getStaticProps() {
-  const res = await axios.get('https://apiv2.guildleaderboard.com/leaderboard');
+  const res = await axios.get('https://apiv2.guildlb.com/leaderboard');
   let guildsJson = res.data;
   for (const guild of guildsJson) {
     guild.positions = guild.positions.split(',');
@@ -328,7 +328,7 @@ export async function getStaticProps() {
     console.error(json);
     throw new Error('Failed to fetch API');
   }
-  const res2 = await axios.get('https://apiv2.guildleaderboard.com/stats');
+  const res2 = await axios.get('https://apiv2.guildlb.com/stats');
 
   const stats = res2.data;
   if (res2.status !== 200) {
